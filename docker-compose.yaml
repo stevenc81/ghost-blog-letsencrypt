@@ -9,7 +9,7 @@ services:
     environment:
       - url=https://steven.news
   nginx:
-    image: nginx
+    image: nginx:1.13.5
     links:
       - ghost
     volumes:

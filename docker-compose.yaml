@@ -15,8 +15,8 @@ services:
     volumes:
       - ./etc/nginx/conf.d/:/etc/nginx/conf.d/
     environment:
-      VIRTUAL_HOST: steven.news,www.steven.news,cdn.steven.news
-      LETSENCRYPT_HOST: steven.news,www.steven.news,cdn.steven.news
+      VIRTUAL_HOST: steven.news,www.steven.news
+      LETSENCRYPT_HOST: steven.news,www.steven.news
       LETSENCRYPT_EMAIL: stevenc81@gmail.com
   nginx-proxy:
     image: jwilder/nginx-proxy:0.6.0

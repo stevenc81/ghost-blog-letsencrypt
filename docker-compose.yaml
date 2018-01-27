@@ -1,7 +1,7 @@
 version: '2'
 services:
   ghost:
-    image: ghost:1.16.2
+    image: ghost:1.20.0
     volumes:
       - ./ghost-db/:/var/lib/ghost/content/
     expose:
@@ -25,7 +25,7 @@ services:
       - ./nginx/certs:/etc/nginx/certs
       - /var/run/docker.sock:/tmp/docker.sock:ro
   letsencrypt-nginx-proxy-companion:
-    image: jrcs/letsencrypt-nginx-proxy-companion:v1.5
+    image: jrcs/letsencrypt-nginx-proxy-companion:v1.7
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     volumes_from:
